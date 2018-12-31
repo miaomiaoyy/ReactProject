@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 // import logo from "../logo.svg";
 import { Link, animateScroll as scroll } from "react-scroll";
+import { Parallax, Background } from 'react-parallax';
 
 export default class Navbar extends Component {
   scrollToTop = () => {
@@ -11,6 +12,14 @@ export default class Navbar extends Component {
     return (
       <nav className="nav" id="navbar">
         <div className="nav-content">
+          <div className="sep">
+          <Parallax strength={300}>
+              <h1>Lady Yang</h1>
+              <Background className="custom-bg">
+                  <img src="https://i.pinimg.com/originals/99/98/e8/9998e84d729b1a8b06f37018b4080920.jpg" alt="fill murray" />
+              </Background>
+          </Parallax>
+          </div>
           <img
             // src="https://via.placeholder.com/200x100"
             src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"

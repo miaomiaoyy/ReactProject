@@ -35,3 +35,15 @@ body {
     0 8px 0 1px rgba(0,0,0,.4),
     0 8px 8px 1px rgba(0,0,0,0.5);
 }
+
+.sep {
+  padding-top: 10px;
+}
+
+/*.img {
+  position: relative;
+  height: 500px;
+  width: 2000px;
+  text-align: left;
+  display: flex;
+}*/

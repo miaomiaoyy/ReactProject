@@ -6,18 +6,16 @@ import ReactDOM from 'react-dom';
 import Section from './Section';
 import Navbar from './Navbar';
 import Login from './Login';
-
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-// import { ParallaxProvider } from 'react-scroll-parallax';
-
+import { ParallaxProvider } from 'react-scroll-parallax';
+import { Parallax, Background } from 'react-parallax';
 
 // class Wrpper extends React.Component {
 //   render() {
 //   return(
 //        <ParallaxProvider> 
-//           <Cake />
+//           <App />
 //         </ParallaxProvider>
 //         )
 //   }
@@ -28,7 +26,14 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Lady Yang</h1> 
+         <div className="sep">
+          <Parallax strength={400}>
+              <h1>Lady Yang</h1>
+              <Background className="custom-bg">
+                  <img src="https://i.pinimg.com/originals/99/98/e8/9998e84d729b1a8b06f37018b4080920.jpg"/>
+              </Background>
+          </Parallax>
+          </div>
         <button className="btn-3d purple">My first button</button>
         <button className="btn-3d purple">More Cakes</button>
         <Login />
