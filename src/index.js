@@ -1,24 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button } from 'antd';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import App from './components/App.js';
+import Login from './components/Login.js';
+import Register from './components/Register.js';
+import Checkout from './components/Checkout.js';
 
-class Cake extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1>Lady Yang</h1>
-        <Button ghost>My first button</Button>
-        <Button type="dashed" ghost>Dashed</Button>
 
-      </div>
-      // </LocaleProvider>
-    );
-  }
-}
 
-// ========================================
+const Root = () => (
+  <Router>
+    <Switch>
+      <Route component={App} exact path="/" />
 
-ReactDOM.render(
-  <Cake />,
-  document.getElementById('root')
-);
+      <Route component={Login} exact path ="/Login" />
+
+      <Route component={Checkout} exact path="/Checkout" />
+
+      <Route component={Register} exact path="/Register" />
+
+    </Switch>
+
+  </Router>
+
+) 
+
+
+ReactDOM.render(<Root />,
+document.getElementById("root"));
+
+if(module.hot) {
+  module.hot.accept();
+} 
