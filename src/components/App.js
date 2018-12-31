@@ -10,6 +10,8 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { Parallax, Background } from 'react-parallax';
+import Sider from './Sider';
+
 
 // class Wrpper extends React.Component {
 //   render() {
@@ -21,11 +23,25 @@ import { Parallax, Background } from 'react-parallax';
 //   }
 // }
 
- 
+// const SubMenu = Menu.SubMenu;
+
+// handleClick = (e) => {
+//   console.log('click ', e);
+//   this.setState({
+//     current: e.key,
+//   });
+// }
+
 class App extends React.Component {
   render() {
     return (
       <div>
+        
+      <Sider>
+      Yang
+      </Sider>
+
+
          <div className="sep">
           <Parallax strength={400}>
               <h1>Lady Yang</h1>
