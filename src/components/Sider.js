@@ -27,14 +27,7 @@ export default class Sider extends React.Component {
   render() {
     return (
       <div>
-        <Switch
-          checked={this.state.theme === 'dark'}
-          onChange={this.changeTheme}
-          checkedChildren="Dark"
-          unCheckedChildren="Light"
-        />
-        <br />
-        <br />
+    
         <Menu
           theme={this.state.theme}
           onClick={this.handleClick}

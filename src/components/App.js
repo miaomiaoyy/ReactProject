@@ -6,8 +6,10 @@ import ReactDOM from 'react-dom';
 import Section from './Section';
 import Navbar from './Navbar';
 import Login from './Login';
+import 'antd/dist/antd.css'; 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'gestalt/dist/gestalt.css';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { Parallax, Background } from 'react-parallax';
 import Sider from './Sider';
@@ -36,28 +38,20 @@ class App extends React.Component {
   render() {
     return (
       <div>
+      <Parallax strength={500} bgImage="https://img.freepik.com/free-vector/pink-background-with-waves_23-2147631423.jpg?size=338&ext=jpg">
+              <h1 className="dance">Lady Yang</h1>
+
+      </Parallax>
+      
+
+      <Navbar />
+    
         
-      <Sider>
-      Yang
-      </Sider>
-
-
-         <div className="sep">
-          <Parallax strength={400}>
-              <h1>Lady Yang</h1>
-              <Background className="custom-bg">
-                  <img src="https://i.pinimg.com/originals/99/98/e8/9998e84d729b1a8b06f37018b4080920.jpg"/>
-              </Background>
-          </Parallax>
-          </div>
-        <button className="btn-3d purple">My first button</button>
-        <button className="btn-3d purple">More Cakes</button>
-        <Login />
          <div className="Cake">
-          <Navbar />
+           
             <Section
-              title="Section 1"
-              subtitle={"Customize your cake"}
+              title="Love empowers"
+              subtitle={"Send love and greetings here"}
               dark={true}
               id="section1">
                 <div class="cakecontainer">
@@ -74,6 +68,7 @@ class App extends React.Component {
                 </a>
               </div>
             </Section>
+
             <Section
               title="Section 2"
               subtitle={"Top 10 best sells"}

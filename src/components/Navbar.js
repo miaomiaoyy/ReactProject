@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 // import logo from "../logo.svg";
 import { Link, animateScroll as scroll } from "react-scroll";
-import { Parallax, Background } from 'react-parallax';
+import { Box, Text, Heading, Image } from 'gestalt';
+import { NavLink } from 'react-router-dom';
+import logoSrc from './t2.jpg';
+
 
 export default class Navbar extends Component {
   scrollToTop = () => {
@@ -10,66 +13,65 @@ export default class Navbar extends Component {
 
   render() {
     return (
-      <nav className="nav" id="navbar">
-        <div className="nav-content">
-          <div className="sep">
-          <Parallax strength={300}>
-              <h1>Lady Yang</h1>
-              <Background className="custom-bg">
-                  <img src="https://i.pinimg.com/originals/99/98/e8/9998e84d729b1a8b06f37018b4080920.jpg" alt="fill murray" />
-              </Background>
-          </Parallax>
-          </div>
+
+      <div className="foo">
+    
+        <Box
+          height={50}
+          color="lightGray"
+          padding={1}
+          shape="roundBottom"
+          justifyContent="around"
+          direction="row"
+          display="flex"
+          alignItems="center"
+        >
+          <NavLink to="/signin">
+            <Text size="xl" color="midnight">
+              SignIn 
+            </Text>
+          </NavLink>
+
+          <NavLink to="/" >
+            <Box direction="row" alignItems="center" display="flex">
+              <img
+                src={logoSrc}
+                alt="logo"
+                height={31}
+              />
+              <h1 size='xs' className="dance"> sheepChef</h1>
+            </Box>
+          
+          </NavLink>
+          <NavLink to="/register">
+            <Text size="xl" color="midnight">
+              Register 
+            </Text>
+          </NavLink>
+              
+        </Box>
+
+        <div className="nav-content" display="block">
           <img
             // src="https://via.placeholder.com/200x100"
-            src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
-            className="nav-logo"
-            alt="Logo"
+            src="https://images.wallpaperscraft.com/image/valentines_day_cake_gift_recognition_99516_1920x1080.jpg"
+            alt="Flower"
+            display="block"
             onClick={this.scrollToTop}
           />
-          <ul className="nav-items">
-     
-
-
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                to="section1"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                Section 1
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                to="section2"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                Section 2
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                to="section3"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                Section 3
-              </Link>
-            </li>
-          </ul>
+        
         </div>
-      </nav>
+
+    <div className="nav-content" display="block">
+      <img
+            src="http://media.clickondetroit.com/photo/2017/03/03/Bakery%20big%20wedding%20cake_1488564279182_9092226_ver1.0_1280_720.JPG"
+            alt="Wedding"
+            display="block"
+            onClick={this.scrollToTop}
+          />
+
+      </div>
+    </div>
     );
   }
 }
